@@ -53,14 +53,14 @@ public class XStatusBar {
     /**
      * 3.1、半透明状态栏(ContentView 内容会顶到状态栏,状态栏被半透明小色块替代)(默认透明度)
      */
-    public static void translucentStatusBar(@NonNull Activity activity) {
-        translucentStatusBar(activity, DEFAULT_ALPHA);
+    public static void setStatusBarTranslucent(@NonNull Activity activity) {
+        setStatusBarTranslucent(activity, DEFAULT_ALPHA);
     }
 
     /**
      * 3.2、半透明状态栏(ContentView 内容会顶到状态栏,状态栏被半透明小色块替代)(默认透明度)
      */
-    public static void translucentStatusBar(@NonNull Activity activity, @IntRange(from = 0, to = 255) int alpha) {
+    public static void setStatusBarTranslucent(@NonNull Activity activity, @IntRange(from = 0, to = 255) int alpha) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             return;
         }
@@ -82,7 +82,7 @@ public class XStatusBar {
 
     /**
      * 代码设置setFitsSystemWindows
-     * 直接给ContentView设置无效，所以设置给ContentView 的第一个子 View，即布局文件中的layout填充的View
+     * 直接给ContentView设置无效，所以设置给ContentView 的第一个子 View，即布局文件中的layout填充形成的View
      */
     public static void setFitsSystemWindows(Activity activity, boolean isFitsSystemWindows) {
         ViewGroup mContentView = (ViewGroup) activity.findViewById(Window.ID_ANDROID_CONTENT);
