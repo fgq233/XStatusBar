@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">XStatusBar</string>
+    <string name="title_activity_status_font">StatusFontActivity</string>
+</resources>
